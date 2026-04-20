@@ -1,4 +1,4 @@
-from pyfingerprint import Pyfingerprint
+from pyfingerprint.pyfingerprint import PyFingerprint
 import time
 import serial
 import os
@@ -120,6 +120,38 @@ class Biometrics():
             return False
 
         try:
+            fingerprint_path = os.path.join(self.base_path,f'{img_name}.png')
+
+            timeout = 10
+            start_time = time.time()
+
+            while not self.fingerprint.readImage():
+                if time.time() -start_time >  timeout:
+                    print('Download Image timeout.....')
+                    return False
+                time.sleep(0.1)
+
+            self.fingerprint.downloadImage(fingerprint_path)
+
+            if os.path.exists(fingerprint_path):
+                print(f'Fingerprint image saved to {fingerprint_path}')
+                return fingerprint_path
+
+            else:
+                print('Error saving fingerprint image')
+                return False
+        
+        except Exception as e:
+            print(f'Download image error : {e}')
+            return False
+
+    def test_function(self):
+        return "Backend is working correctly..."
+
+    
+
+    
+        
 
 
     
