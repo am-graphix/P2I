@@ -4,7 +4,7 @@ from fingerprint import Biometrics
 
 
 app = flask.Flask(__name__)
-
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/')
 def index():
