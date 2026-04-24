@@ -53,7 +53,9 @@ scan_btn.addEventListener("click", async () => {
         scanner_line.style.opacity = "0";
         btn_text.innerText = "Start Scanning";
         scan_btn.disabled = false;
-        alert(output.message);
+        user_info = document.querySelector(".fingerprint-details");
+        user_info.style.opacity = "1";
+        // alert(output.message);
     }
 
 })
