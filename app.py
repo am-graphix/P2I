@@ -1,6 +1,7 @@
 import flask
 from flask import jsonify
 from fingerprint import Biometrics
+import time
 
 
 app = flask.Flask(__name__)
@@ -16,6 +17,7 @@ def test_backend():
     a = Biometrics()
     res = a.test_function()
     print(res)
+    time.sleep(2)
     return jsonify({
         "message" : res
     })

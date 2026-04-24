@@ -9,8 +9,63 @@
 </head>
 
 <body>
-    <div class="top">
-        <h1>P2<span>ǐ</span></h1>
+    <header>
+        <div class="header-left">
+            <h1 class="logo">
+                <span class="logo-p2">P2</span><span class="logo-i">ǐ</span>
+            </h1>
+
+            <div class="divider"></div>
+            <div class="tagline">Press To Identify</div>
+        </div>
+
+        <div class="header-right">
+            <div class="status-badge">
+                <div class="status-dot"></div>
+                <span class="status-text" id="status-text">Scanner ready</span>
+            </div>
+
+            <button class="admin-btn" id="admin-button">
+                <img class="admin-icon" src="../static/icons/account.svg">
+                <span class="admin-btn-text">Admin</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="main-canvas">
+        <div class="scanner-unit">
+            <div class="scanner-container">
+                <div class="scanner-outer-ring"></div>
+                <div class="scanner-inner-ring"></div>
+                <div class="scanner-core">
+                    <div class="scanner-line"></div>
+                    <div class="glass-effect"></div>
+                    <img class="fingerprint-icon" src="../static/icons/fingerprintsvg.svg">
+                </div>
+            </div>
+
+            <div class="container-display">
+                <h2 class="instruction-text">Place your finger on the scanner</h2>
+                <p class="sub-text">Ensure your fingers are dry and clean to get the best results</p>
+
+                <div class="scan-btn-area">
+                    <button class="scan-btn">
+                        <div class="btn-gradient"></div>
+                        <span class="btn-content">Start Scanning</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="meta-data">
+            <span>Fingers Scanned : 24/100</span>
+            <span id="clock">Time : </span>
+            <span id="date">Date : </span>
+            <span>@AM Technologies</span>
+        </div>
+
     </div>
 
     <h1>THIS PROJECT IS CURRENTLY UNDER TEST.. DUE TO THE HARDWARE CONSTRAINTS, BACKEND IS BEING REVISED....<br>
