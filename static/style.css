@@ -330,7 +330,7 @@ header {
 
 }
 
-.fingerprint-details:active {
+.show-fingerprint {
     animation: slide_from_left 2s ease-in-out forwards;
 }
 
@@ -420,7 +420,7 @@ header {
 
 @keyframes slide_from_left {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(100%);
         opacity: 0.3;
     }
 
